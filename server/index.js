@@ -2,11 +2,16 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+const person = {
+  name: 'ismat',
+  age: 10,
+}
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 app.get('/users', (req, res) => {
-  res.send('Hello users!')
+  res.send(person)
 })
 
 app.listen(port, () => {
